@@ -113,7 +113,7 @@ This is enough to describe all games . Indeed, if you have a non-trivial dialogu
 
 We thus have a correspondance as advertised, up to associativity of both connectors and distributivity of the sum over the tensor product.
 
-We will also need one more structure, the game which will contain the arrows from $A$ to $B$ in the category of dialogue games, which will be strategies : The tensorial implication $A \triangleright B := \neg (A \otimes \neg B)$
+We will also need one more structure, the game which will contain the arrows from $A$ to $B$ in the category of dialogue games, which will be strategies : The tensorial implication $A \triangleright B := \neg (A \otimes  B*)$ where $B*$ is the game obtained from $B$ by removing the root and inversing Opponent and Player moves).
 
 \subsection{Sequential Trajectories}
 
@@ -182,6 +182,8 @@ The schedule (how the moves of the different components are ordered) is the same
 \end{itemize}
 \end{proof}
 
+
+
 \begin{lemma}
 Let A be a Dialogue Game, x a legal position, s and t two sequential trajectories getting to x. Then there is a sequence of trajectories $s_1,...s_n$ such that $s,s_1,... s_n,t$ are a sequence of trajectories related through $\equiv_{OP}$ and $\equiv_{PO}$ alternately and the size of the largest common prefix of $s_i$ and $t$ increases strictly with $i$, (with $s$ being seen as $s_0$. For example,  $s \equiv_{OP} s_1\equiv_{PO} s_2 ... \equiv_{OP} s_n \equiv_{PO} t$
 \end{lemma} 
@@ -226,6 +228,8 @@ This allows us to build $u$ as needed and thus,$\sigma$ is bi-invariant.
 
 \end{itemize}
 \end{proof}
+
+We tried two different methods of describing strategies who act coherently even if the opponent reorders his moves, a local one describing specifically what moves can be reordered and a more global one just stating that the strategy must be able to answer a reordering. What this theorem means is that both the local and global methods are creating the same strategies, ensuring the strength of that definition.  
 
 \begin{theorem}
  Dialogue games and Confluent Strategies form a category.
@@ -276,7 +280,16 @@ We then define a pre-strategy as a partial function $\alpha$ from $A_O$ to $A_P$
 \begin{definition}
 a strategy of the game $A$ is a conflict-free pre-strategy, that is a pre-strategy such that if $a \in R(\alpha)\bigcap A_P$ is reachable from $a' \in R(\alpha)\bigcap A_O$ then $\alpha (a')$ is defined and a is reachable from $\alpha(a')$. 
 \end{definition}
-TODO Remaining defs
+
+\begin{definition}{Multiplicative Structure}
+\begin{itemize}
+\item The tensor $A\otimes B$ of two graph games $A$ and $B$ is the graph game whose player positions are in $A_P \times B_P$ and whose Opponent positions are in $(A_P \times B_O) + (A_O \times B_P)$. Its initial position is $ (*_A, *_B)$ and there is a move from $(a,b)$ to $(a',b')$ when either there is a move from $a$ to $a'$ in A and $b=b'$ or there is a move from $b$ to $b'$ in B and $a=a'$.\\
+\item The linear function space $A \multimap B$ of two graph games $A$ and $B$ is the graph game whose player positions are in $(A_P \times B_P) + (A_O \times B_O)$ and whose opponent positions are in $A_P \times B_O$. Its initial position is $ (*_A, *_B)$ and there is a move from $(a,b)$ to $(a',b')$ when either there is a move from $a$ to $a'$ in A and $b=b'$ or there is a move from $b$ to $b'$ in B and $a=a'$.\\
+\end{itemize}
+\end{definition}
+
+We can then define the category of Graph Games and Conflict-free Strategies as the category whose objects are the graph games and whose arrows from $A$ to $B$ are the conflict-free strategies of the game $A\multimap B$. The composition of strategies is defined by a process based on parallel composition plus hiding of trajectories in the graph.
+  
 \subsection{Proving the correspondance}
 \begin{theorem}
 There exists a full and faithful functor $F$ between the category of dialogue games and sequential confluent strategies, and the category of graph games and conflict-free strategies.
@@ -297,11 +310,13 @@ Applying our translation to those statements gives us $F(\sigma) (a)$ is defined
 One can note that we have been able to do the translation for strategies of all dialogue games, and not only for the ones that are arrows in our category.\\
 
 \end{itemize}
-let us now check the remaining properties of the functor : \\ TODO
+let us now check the remaining properties of the functor : 
 
 \begin{itemize}
-\item identity 
-\item composition
+\item The aforementioned construction of $F$ makes it easy to prove that the image of the copycat strategy of a dialogue game $A\rhd A$ is the copycat strategy of the graph game $F(A)\rightarrow F(A)$, the answer to an Opponent move played in one component always being the same move played in the other component.\\
+
+\item Let $A, B, C$ be three dialogue games, $\sigma$ a strategy $ A \rhd B$ and $\tau$ a strategy in $B \rhd C$. We have $F(\sigma o \tau)( a,c) = (a', c')$ when there's a trajectory in $\sigma o \tau$ moving from $(a,c)$ to $(a',c')$ , which, by parallel composition plus hiding, means that there is a trajectory in $\sigma$ moving from $a,b$ to $a',b'$ and a trajectory in $\tau$ moving from $b,c$ to $b',c'$ composing correctly. Those trajectories are the same in the graph games, meaning that they belong in $F(\sigma)$ and $F(\tau)$, and thus the initial trajectory belongs to $F(\sigma) o F(\tau)$. \\
+
 \end{itemize}
 Furthermore, the functor is indeed fully faithful.\\
  One only has to build the set of trajectories $G(\alpha)$ back from the partial function $\alpha$ to get the strategy that produced it, by using the inductive construction of the reachable set fo the strategy.\\
