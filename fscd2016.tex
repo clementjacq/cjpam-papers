@@ -40,12 +40,14 @@
 \begin{document}
 
 \maketitle
+
 \section*{Introduction}
 \hspace{1.2cm}  
 
 \section{Dialogue Games}
 \subsection{Definitions}
-\begin{definition}
+\begin{definition}{Dialogue Game}
+
 A Rooted Dialogue Game is a bipartite rooted tree whose nodes are separated in two sets Cells and Values. By bipartite we mean that the children of a Value are Cells and the children of a Cell are Values. \\Additionally, a rooted dialogue game is provided with a polarising function $\lambda : Cells \oplus Values \rightarrow \{O;P\}$ such that any child of a Cell has its polarity and any child of a Value has the opposite polarity.\\
 Finally, The root of a rooted dialogue game is a P-Value. \\
 A Dialogue Game is a set of Rooted Dialogue Games.
@@ -54,7 +56,8 @@ The basic intuition here is that we see Dialogue Games as a game semantics expan
 
 \begin{figure}\centering\includegraphics[scale=0.6]{dialoguegame1.pdf}\caption{An Example of Rooted Dialogue Game of root *} \end{figure}
 
-\begin{definition}
+\begin{definition}{Compatibility}
+
 Taking the usual order relation on nodes ($a\leq b$ if $a$ is an ancestor of $b$), we note $a\wedge b$ the greatest(first) common ancestor of $a$ and $b$ and define the following notion of compatibility: \\
 $a$ and $b$ are said to be compatible when $a\wedge b$ is a Value. They are said to be incompatible otherwise.
  
@@ -63,7 +66,8 @@ Intuitively, compatible nodes stand for concurrent choices, where we can choose 
 
 This notion of compatibility is paramount to the understanding of those games, as they describe the valid moves one can make at a given moment.\\
 
-\begin{definition}
+\begin{definition}{Position}
+
 A position of a dialogue game is a downward-closed set $x$ of pairwise-compatible Values, that is : 
 \begin{itemize}
 \item $\forall v,w \in Values, v\leq w \text{ and } w\in x \Rightarrow v \in x$
@@ -74,9 +78,9 @@ A position of a dialogue game is a downward-closed set $x$ of pairwise-compatibl
 
 Two positions $x$ and $y$ are said to be compatible if there is no $v \in x, w \in y$ such that $v$ and $w$ are incompatible.\\
 \end{definition}
-\begin{definition}
+\begin{definition}{Trajectory}
 
-Let $s$ and $t$be two positons of a dialogue game $A$. and $v$ a value of A. . We set $s \xrightarrow{v} t \text{ if and only if } t = s \sqcup \text{ t} $\\
+Let $s$ and $t$ be two positons of a dialogue game $A$. and $v$ a value of A. We set $s \xrightarrow{v} t \text{ if and only if } t = s \sqcup \text{ t} $.\\
 
 A trajectory of a dialogue game is a sequence of positions starting from the root such that there is an alternating path $ \xrightarrow{v_1} s_1 \xrightarrow{v_2} $... $\xrightarrow{v_n} s_n$.\\
 
@@ -109,16 +113,18 @@ Thus the tensorial product of these negative games :
 is this rooted game :
 
 \begin{figure}[H]\centering\includegraphics[scale=0.6]{dialoguegame5.pdf} \caption{An example of Tensorial Product} \end{figure}
-This is enough to describe all games . Indeed, if you have a non-trivial dialogue game, either it's a set of rooted games ( in which case, the associated formula will be a sum of the games' formulas) or it's a rooted game. \\In this last case, there are two possibilities, either there's only one cell justified by the root (the associated formula is then the negation of a game) or there is several (the associated formula is then a tensor product of negated games).\\ 
+This is enough to describe all games . Indeed, if you have a non-trivial dialogue game, either it is a set of rooted games ( in which case, the associated formula will be a sum of the games' formulas) or it is a rooted game. \\In this last case, there are two possibilities, either there is only one cell justified by the root (the associated formula is then the negation of a game) or there are several (the associated formula is then a tensor product of negated games).\\ 
 
 We thus have a correspondance as advertised, up to associativity of both connectors and distributivity of the sum over the tensor product.
 
-We will also need one more structure, the game which will contain the arrows from $A$ to $B$ in the category of dialogue games, which will be strategies : The tensorial implication $A \triangleright B := \neg (A \otimes  B*)$ where $B*$ is the game obtained from $B$ by removing the root and inversing Opponent and Player moves).
+We will also need one more structure, the game which will contain the arrows from $A$ to $B$ in the category of dialogue games, which will be strategies : The tensorial implication $A \triangleright B := \neg (A \otimes  B^*)$ where $B*$ is the game obtained from $B$ by removing the root and inversing Opponent and Player moves).
 
 \subsection{Sequential Trajectories}
 
 We will look at specific trajectories, that we will call sequential trajectories. Those trajectories are alternating, and all their projections on components are too.( For example, a trajectory on $A \otimes B$ need to be alternating on $A \otimes B$, $A$ and $B$.) Those trajectories will not be able to visit all positions so we need to have a notion of legal positions, they will come in two flavors, positive when one can play an Opponent  move from them and negative when one can play a Player move:
-\begin{definition} We introduce this notion of flavor by induction over the structure of the games : 
+\begin{definition}{Flavored Positions}
+
+ We introduce this notion of flavor by induction over the structure of the games : 
 \begin{itemize}
 \item The only position of the $1$ game is $+$. 
 \item The flavour of positions of a game $A$ are reversed when in the  game $\neg A$
@@ -138,7 +144,8 @@ We can also refine the definition of the underlying graph into a legal underlyin
 We introduce some equivalence relations over sequential trajectories defined by induction over the structure of the Dialogue games. These definitions are motivated by the wish to understand how  a trajectory can be reorganized into another one when a move is played at a different moment. We also wish to build strategies that would be invariant by those relations to be able to interpret two programs whose only differences are the order of computations in the same way.\\
 
  We need to have two different equivalence relations because the structure of the dialogue games and of the sequential trajectories highlight major differences between P moves and O moves.
-\begin{definition}
+\begin{definition}{Reordering Relations}
+
 Let A be a Dialogue game, x a legal position of A. We define two equivalence relations $\equiv_{OP}$ and $\equiv_ {PO}$ over sequential trajectories reaching $x$ by induction over the structure of $A$ : 
 \begin{itemize}
 \item for the game $1$, both equivalence relations are the identity.
@@ -153,7 +160,7 @@ Let A be a Dialogue game, x a legal position of A. We define two equivalence rel
 \end{itemize}
 \end{itemize} 
 \end{definition}
-The definition for the tensor product is a direct consequence of both the structure of the dialogue game and the notion of sequential trajectory. Indeed, it's easy to see that in that case, a P move always follows a O move coming from the same component, and that such a couple of move can be switched with an adjacent couple of moves coming from the other component without causing any upheaval in the trajectory. \\
+The definition for the tensor product is a direct consequence of both the structure of the dialogue game and the notion of sequential trajectory. Indeed, it is easy to see that in that case, a P move always follows a O move coming from the same component, and that such a couple of move can be switched with an adjacent couple of moves coming from the other component without causing any upheaval in the trajectory. \\
  \begin{lemma}
 Let $A$ be a Dialogue Game, $x$ a legal position, $s=s_0.m.s_1$ a sequential trajectory getting to $x$, $m'$ a move playable at $s_0$ and played in $s$ such that  $m'\neq m$, then there exists $t=s_0.m'.t_1$ a sequential trajectory such that $s\equiv_{OP} t$ or $s\equiv_{PO} t$
 \end{lemma}
@@ -165,12 +172,12 @@ There are two cases depending on whether $m$ and $m'$ are $O$ moves or $P$ moves
 
 \begin{itemize}
 \item If they are, let us assume $O$ and $O'$ belong to $A_1$.  In this case, we look at the projections over $A_1$. $s|A_1$ is a sequential trajectory reaching $x|_{A_1}$.\\ By induction, we get a sequential trajectory $u_1$ of $A_1$ reaching $x|_{A_1}$ such that $u_1$ starts with $s_0|_{A_1}.O'$. Back in the tensor product, we build $s_1$ in the following way :\\ 
-The schedule (how the moves of the different components are ordered) is the same one as $s$. The moves coming from $A_2$ don't change, the moves coming from $s_1$ are in the order of $u_1$. That way, we have $s \equiv_{OP} s_1$, and $s_1$ starts with $s_0.O'$ .\\
+The schedule (how the moves of the different components are ordered) is the same one as $s$. The moves coming from $A_2$ do not change, the moves coming from $s_1$ are in the order of $u_1$. That way, we have $s \equiv_{OP} s_1$, and $s_1$ starts with $s_0.O'$ .\\
 
-\item If they aren't, let us assume $O$ belong to $A_1$ and $O'$ to $A_2$. We have again two subcases depending on whether $O'$ is the first move in $s|_{A_2}$  or not.
+\item Otherwise, let us assume $O$ belong to $A_1$ and $O'$ to $A_2$. We have again two subcases depending on whether $O'$ is the first move in $s|_{A_2}$  or not.
 \begin{itemize}
 \item If it is, we build $s_1$ by moving $O'$ and its answer to the beginning of the trajectory. (it will only switch them with couples of moves of the other component, which is allowed by the definition of $\equiv_{OP})$ .
-\item if it isn't, we first do the aforementioned switch to bring the first move  $O''$  of $s\_{A_2}$, and then we apply the method of the first subcase where both O moves are in the same component.
+\item Otherwise, we first do the aforementioned switch to bring the first move  $O''$  of $s\_{A_2}$, and then we apply the method of the first subcase where both O moves are in the same component.
 \end{itemize}
 
 \end{itemize}
@@ -189,24 +196,26 @@ Let A be a Dialogue Game, x a legal position, s and t two sequential trajectorie
 \end{lemma} 
 TODO add pictures
 \begin{proof}
-We prove it by iterating the earlier lemma, first on $s$ and the first move in $t$ that's different from the moves in $s$. It gives us a $s_1$ trajectory as intended. We apply the lemma again on $s_1$ and the first move in $t$ that different from the moves in $s_1$. If the diverging move in the former iteration of the lemma is of the same kind ( Opponent or Playerà as the one in this iteration, we replace $s_1$ by our new result, otherwise we define $s_2$ as our new result. We can continue applying this method, the size of the diverging part of the trajectory decreases strictly with each iteration, so it's a finite process.
+We prove it by iterating the earlier lemma, first on $s$ and the first move in $t$ that's different from the moves in $s$. It gives us a $s_1$ trajectory as intended. We apply the lemma again on $s_1$ and the first move in $t$ that different from the moves in $s_1$. If the diverging move in the former iteration of the lemma is of the same kind ( Opponent or Playerà as the one in this iteration, we replace $s_1$ by our new result, otherwise we define $s_2$ as our new result. We can continue applying this method, the size of the diverging part of the trajectory decreases strictly with each iteration, so it is a finite process.
 \end{proof}
 
 Now that we have introduced our equivalence relations, we will introduce a notion of strategy based on them. We could use equivalence classes of $\equiv_{OP}$  which are deterministic, but they will not have the properties we will need, so we need to add a bit more complexity.
 
 
-\begin{definition}
+\begin{definition}{Bi-Invariant Strategy}
+
 A strategy $\sigma$ on a dialogue game A is said to be bi-invariant if it only contains sequential trajectories, and : $$\forall s \in \sigma,\forall t, s \equiv_{OP} t \Rightarrow \exists u \in \sigma t \equiv_{PO} u$$
 \end{definition}
 
 
 \subsection{Confluent Strategies}
 Let us now look into a new kind of strategies, inspired by rewriting theory. Similarly to the equivalence relations,  the idea comes from the fact that we would want to interpret in the same way two programs that do the same work but handle some computation in a different order (like the two boolean or taking a look at left or right argument first).\\ In terms of trajectories, it means that we want the strategy to be able to play available moves in every possible order. That inspired the definition of confluent strategies : 
-\begin{definition}
+\begin{definition}{Confluent Strategy}
+
 A strategy is said to be confluent if it only contains sequential trajectories and if $for s,t \in \sigma$,$m$ a position ,$ s.m \subset t \Rightarrow \exists n, s.m.n \in \sigma \wedge s.m.n \subset t$.\\
 It is said to be total if for $s \in \sigma$, $m$ a position, $s.m$ is a valid trajectory $\Rightarrow \exists n, s.m.n \in \sigma$.
 \end{definition}
-Intuitively, it means that a confluent strategy will explore all paths to a given position in the strategy and that a total strategy will stop exploring the game's tree only when there's no path left.\\
+Intuitively, it means that a confluent strategy will explore all paths to a given position in the strategy and that a total strategy will stop exploring the game's tree only when there is no path left.\\
 
 \begin{theorem}
 
@@ -246,8 +255,8 @@ If we play a first move to get to a position $m$ under $t_\tau$, it will be unde
 
 
 We can thus apply confluency on $s_\tau, t_\tau$ and $s_\sigma, t_\sigma$. 
-we have two possibilities, the move to get to $m$ from $s$ is a move in $C$ or in $A$.  Let us suppose it's a move in $C$ (We handle the other case similarly).\\ We thus have $s_\tau.m_\tau \subset t_\tau$, where $m_\tau$ is the position we get at when playing the same move than for $m$, but from $s_\tau$. \\By confluency of $\tau$, there exists a move getting us to a position $n_\tau$, such that $s_\tau.m_\tau.n_\tau \in \tau$ and $s_\tau.m_\tau.n_\tau \subset t_\tau$. $n_\tau$ can come from a move in $B$ or in $C$.\\ If it's a move in $C$, we can play the same move from $s.m$ to get the $n$ we need.\\ If it's a move in $B$, it's a move we can play from $s_\sigma$ to get to a position $n_\sigma$ and $s_\sigma.n_\sigma \subset t_\sigma$ since $s_\tau.m_\tau.n_\tau \subset t_\tau$ and $t_\sigma|B=t_\tau|B$. By confluency of $\sigma$, there exists a move getting us to a position $o_\sigma$ such that $s_\sigma.n_\sigma.o_\sigma \subset t_\sigma$ and 
-$s_\sigma.n_\sigma.o_\sigma \in \sigma$. Once again, $o_\sigma$ can come from a move in $A$ or in $B$.\\ If it's a move in $A$, we can play the same move from $s.m$ to get the $n$ we need.\\ Otherwise, we repeat the method we've used until we get a move from either A or C. \\It is a finite process as we are staying under $t_\sigma$ and $t_\tau$ each time we add a move.
+we have two possibilities, the move to get to $m$ from $s$ is a move in $C$ or in $A$.  Let us suppose it is a move in $C$ (We handle the other case similarly).\\ We thus have $s_\tau.m_\tau \subset t_\tau$, where $m_\tau$ is the position we get at when playing the same move than for $m$, but from $s_\tau$. \\By confluency of $\tau$, there exists a move getting us to a position $n_\tau$, such that $s_\tau.m_\tau.n_\tau \in \tau$ and $s_\tau.m_\tau.n_\tau \subset t_\tau$. $n_\tau$ can come from a move in $B$ or in $C$.\\ If it is a move in $C$, we can play the same move from $s.m$ to get the $n$ we need.\\ If it is a move in $B$, it is a move we can play from $s_\sigma$ to get to a position $n_\sigma$ and $s_\sigma.n_\sigma \subset t_\sigma$ since $s_\tau.m_\tau.n_\tau \subset t_\tau$ and $t_\sigma|B=t_\tau|B$. By confluency of $\sigma$, there exists a move getting us to a position $o_\sigma$ such that $s_\sigma.n_\sigma.o_\sigma \subset t_\sigma$ and 
+$s_\sigma.n_\sigma.o_\sigma \in \sigma$. Once again, $o_\sigma$ can come from a move in $A$ or in $B$.\\ If it is a move in $A$, we can play the same move from $s.m$ to get the $n$ we need.\\ Otherwise, we repeat the method we have used until we get a move from either A or C. \\It is a finite process as we are staying under $t_\sigma$ and $t_\tau$ each time we add a move.
 
 
 
@@ -257,7 +266,8 @@ In this section, we start by reintroducing Graph Games as described by Hyland an
 
 
 \subsection{Graph Games}
-\begin{definition}
+\begin{definition}{Graph Game}
+
 A Graph Game $A$ is given by :
 \begin{itemize}
 \item A set $A = A_P + A_O$ of positions together with an initial position $*_A$. $A_P$ is the set of Player positiosn ( where Opponent has to move) and $A_O$ the set of Opponent positions.
@@ -266,7 +276,8 @@ A Graph Game $A$ is given by :
 \end{itemize}
 \end{definition}
 
-\begin{definition}
+\begin{definition}{Reachable Positions}
+
 Let $\alpha$ be a partial function from $A_O$ to $A_P$ such that $a\rightarrow \alpha(a)$ when it is defined. The set of reachable positions for $\alpha$ $R(\alpha)$ is defined by induction in the following way : 
 \begin{itemize}
 \item $*_A \in R(\alpha)$
@@ -277,7 +288,8 @@ Let $\alpha$ be a partial function from $A_O$ to $A_P$ such that $a\rightarrow \
 We then define a pre-strategy as a partial function $\alpha$ from $A_O$ to $A_P$ such that $a\rightarrow \alpha(a)$ when it is defined and that its domain of definition is a subset of $R(\alpha)$.
 \end{definition}
 
-\begin{definition}
+\begin{definition}{Strategy}
+
 a strategy of the game $A$ is a conflict-free pre-strategy, that is a pre-strategy such that if $a \in R(\alpha)\bigcap A_P$ is reachable from $a' \in R(\alpha)\bigcap A_O$ then $\alpha (a')$ is defined and a is reachable from $\alpha(a')$. 
 \end{definition}
 
@@ -315,7 +327,7 @@ let us now check the remaining properties of the functor :
 \begin{itemize}
 \item The aforementioned construction of $F$ makes it easy to prove that the image of the copycat strategy of a dialogue game $A\rhd A$ is the copycat strategy of the graph game $F(A)\rightarrow F(A)$, the answer to an Opponent move played in one component always being the same move played in the other component.\\
 
-\item Let $A, B, C$ be three dialogue games, $\sigma$ a strategy $ A \rhd B$ and $\tau$ a strategy in $B \rhd C$. We have $F(\sigma o \tau)( a,c) = (a', c')$ when there's a trajectory in $\sigma o \tau$ moving from $(a,c)$ to $(a',c')$ , which, by parallel composition plus hiding, means that there is a trajectory in $\sigma$ moving from $a,b$ to $a',b'$ and a trajectory in $\tau$ moving from $b,c$ to $b',c'$ composing correctly. Those trajectories are the same in the graph games, meaning that they belong in $F(\sigma)$ and $F(\tau)$, and thus the initial trajectory belongs to $F(\sigma) o F(\tau)$. \\
+\item Let $A, B, C$ be three dialogue games, $\sigma$ a strategy $ A \rhd B$ and $\tau$ a strategy in $B \rhd C$. We have $F(\sigma o \tau)( a,c) = (a', c')$ when there is a trajectory in $\sigma o \tau$ moving from $(a,c)$ to $(a',c')$ , which, by parallel composition plus hiding, means that there is a trajectory in $\sigma$ moving from $a,b$ to $a',b'$ and a trajectory in $\tau$ moving from $b,c$ to $b',c'$ composing correctly. Those trajectories are the same in the graph games, meaning that they belong in $F(\sigma)$ and $F(\tau)$, and thus the initial trajectory belongs to $F(\sigma) o F(\tau)$. \\
 
 \end{itemize}
 Furthermore, the functor is indeed fully faithful.\\

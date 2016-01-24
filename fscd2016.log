@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.6.1)  23 JAN 2016 20:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.6.1)  24 JAN 2016 22:15
 entering extended mode
 **fscd2016.tex
 ("C:\Users\Clement\Desktop\articles these\fscd2016.tex"
@@ -1117,51 +1117,46 @@ File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 42.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 43.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 44.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 49.
 
-<dialoguegame1.pdf, id=39, 82.56747pt x 264.71698pt>
+<dialoguegame1.pdf, id=3, 82.56747pt x 264.71698pt>
 File: dialoguegame1.pdf Graphic file (type pdf)
  <use dialoguegame1.pdf>
-Package pdftex.def Info: dialoguegame1.pdf used on input line 55.
+Package pdftex.def Info: dialoguegame1.pdf used on input line 57.
 (pdftex.def)             Requested size: 49.54085pt x 158.8314pt.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 55.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 57.
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
-<cc-by.pdf, id=40, 88.33pt x 31.11626pt>
+<cc-by.pdf, id=4, 88.33pt x 31.11626pt>
 File: cc-by.pdf Graphic file (type pdf)
  <use cc-by.pdf>
-Package pdftex.def Info: cc-by.pdf used on input line 65.
+Package pdftex.def Info: cc-by.pdf used on input line 67.
 (pdftex.def)             Requested size: 39.74274pt x 14.0pt.
 
-<lipics-logo-bw.pdf, id=43, 591.44762pt x 144.42657pt>
+<lipics-logo-bw.pdf, id=7, 591.44762pt x 144.42657pt>
 File: lipics-logo-bw.pdf Graphic file (type pdf)
-
-<use lipics-logo-bw.pdf>
-Package pdftex.def Info: lipics-logo-bw.pdf used on input line 65.
+ <use lipics-logo-bw.pdf>
+Package pdftex.def Info: lipics-logo-bw.pdf used on input line 67.
 (pdftex.def)             Requested size: 64.00354pt x 14.0pt.
- [1
+
+[1
 
 {C:/Users/Clement/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/
 Clement/Desktop/articles these/cc-by.pdf> <C:/Users/Clement/Desktop/articles th
 ese/dialoguegame1.pdf> <C:/Users/Clement/Desktop/articles these/lipics-logo-bw.
 pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 70--71
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--76
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
@@ -1171,201 +1166,228 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--80
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
+Overfull \hbox (11.54933pt too wide) in paragraph at lines 83--84
+[]\T1/ptm/m/n/10 Let $\OML/lmm/m/it/10 s$ \T1/ptm/m/n/10 and $\OML/lmm/m/it/10 
+t$ \T1/ptm/m/n/10 be two positons of a dia-logue game $\OML/lmm/m/it/10 A$\T1/p
+tm/m/n/10 . and $\OML/lmm/m/it/10 v$ \T1/ptm/m/n/10 a value of A. We set $\OML/
+lmm/m/it/10 s [] t[]t \OT1/lmr/m/n/10 =$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--99
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
-<dialoguegame2.pdf, id=84, 291.62248pt x 107.45244pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--103
+
+ []
+
+<dialoguegame2.pdf, id=50, 291.62248pt x 107.45244pt>
 File: dialoguegame2.pdf Graphic file (type pdf)
  <use dialoguegame2.pdf>
-Package pdftex.def Info: dialoguegame2.pdf used on input line 102.
+Package pdftex.def Info: dialoguegame2.pdf used on input line 106.
 (pdftex.def)             Requested size: 174.97484pt x 64.47194pt.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.5> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 103.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 107.
 
-[2] <dialoguegame3.pdf, id=95, 291.62248pt x 192.81134pt>
+[2] <dialoguegame3.pdf, id=62, 291.62248pt x 192.81134pt>
 File: dialoguegame3.pdf Graphic file (type pdf)
 
 <use dialoguegame3.pdf>
-Package pdftex.def Info: dialoguegame3.pdf used on input line 104.
+Package pdftex.def Info: dialoguegame3.pdf used on input line 108.
 (pdftex.def)             Requested size: 174.97484pt x 115.68768pt.
- <dialoguegame4.pdf, id=96, 291.62248pt x 164.35805pt>
+ <dialoguegame4.pdf, id=63, 291.62248pt x 164.35805pt>
 File: dialoguegame4.pdf Graphic file (type pdf)
 
 <use dialoguegame4.pdf>
-Package pdftex.def Info: dialoguegame4.pdf used on input line 108.
+Package pdftex.def Info: dialoguegame4.pdf used on input line 112.
 (pdftex.def)             Requested size: 174.97484pt x 98.61557pt.
- <dialoguegame5.pdf, id=97, 291.62248pt x 164.35805pt>
+ <dialoguegame5.pdf, id=64, 291.62248pt x 164.35805pt>
 File: dialoguegame5.pdf Graphic file (type pdf)
 
 <use dialoguegame5.pdf>
-Package pdftex.def Info: dialoguegame5.pdf used on input line 111.
+Package pdftex.def Info: dialoguegame5.pdf used on input line 115.
 (pdftex.def)             Requested size: 174.97484pt x 98.61557pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--113
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- []
-
-[3 <C:/Users/Clement/Desktop/articles these/dialoguegame2.pdf> <C:/Users/Clemen
-t/Desktop/articles these/dialoguegame3.pdf> <C:/Users/Clement/Desktop/articles 
-these/dialoguegame4.pdf> <C:/Users/Clement/Desktop/articles these/dialoguegame5
-.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 125--127
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 130--131
+ [3 <C:/Users/Clement/Desktop/articles these/dialoguegame2.pdf> <C:/Users/Cleme
+nt/Desktop/articles these/dialoguegame3.pdf> <C:/Users/Clement/Desktop/articles
+ these/dialoguegame4.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--139
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 149--150
+Underfull \hbox (badness 10000) in paragraph at lines 131--133
 
  []
 
 
-Overfull \hbox (49.36745pt too wide) in paragraph at lines 151--151
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+
+ []
+
+[4 <C:/Users/Clement/Desktop/articles these/dialoguegame5.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
+
+ []
+
+
+Overfull \hbox (49.36745pt too wide) in paragraph at lines 158--158
 []$\OMS/lmsy/m/n/10 []$ \T1/ptm/m/n/10 is the equi-val-ence re-la-tion gen-er-
 ated by the couples $\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 s:P:s[]:O:P[]:s[]:O[]:s[
 ]; s:P[]:s[]:O[]:P:s[]:O:s[]\OT1/lmr/m/n/10 )$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--157
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 167--169
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
  []
 
 [5]
-LaTeX Font Info:    Try loading font information for TS1+phv on input line 172.
+Underfull \hbox (badness 10000) in paragraph at lines 174--176
 
- ("D:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ts1phv.fd"
+ []
+
+LaTeX Font Info:    Try loading font information for TS1+phv on input line 179.
+
+("D:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ts1phv.fd"
 File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/bx/n' in size <10> not available
-(Font)              Font shape `TS1/phv/b/n' tried instead on input line 172.
+(Font)              Font shape `TS1/phv/b/n' tried instead on input line 179.
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--180
+Underfull \hbox (badness 10000) in paragraph at lines 184--187
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 209--210
+Underfull \hbox (badness 10000) in paragraph at lines 218--219
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 238--240
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 247--249
 
  []
 
-<confluency_and_composition_1.pdf, id=171, 262.46858pt x 134.41316pt>
+<confluency_and_composition_1.pdf, id=148, 262.46858pt x 134.41316pt>
 File: confluency_and_composition_1.pdf Graphic file (type pdf)
 
 <use confluency_and_composition_1.pdf>
-Package pdftex.def Info: confluency_and_composition_1.pdf used on input line 24
-3.
+Package pdftex.def Info: confluency_and_composition_1.pdf used on input line 25
+2.
 (pdftex.def)             Requested size: 209.97514pt x 107.53065pt.
- [7]
-Underfull \hbox (badness 10000) in paragraph at lines 245--246
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 256--257
+Underfull \hbox (badness 10000) in paragraph at lines 254--255
 
  []
 
 [8 <C:/Users/Clement/Desktop/articles these/confluency_and_composition_1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 286--287
+Underfull \hbox (badness 10000) in paragraph at lines 265--266
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--288
+Underfull \hbox (badness 10000) in paragraph at lines 298--299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--302
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 303--309
+Underfull \hbox (badness 10000) in paragraph at lines 299--300
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 310--311
+Underfull \hbox (badness 10000) in paragraph at lines 313--314
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 316--317
+Underfull \hbox (badness 10000) in paragraph at lines 315--321
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--319
+Underfull \hbox (badness 10000) in paragraph at lines 322--323
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--324
+Underfull \hbox (badness 10000) in paragraph at lines 328--329
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--331
 
  []
 
 [10]
+Underfull \hbox (badness 10000) in paragraph at lines 333--336
+
+ []
+
 No file fscd2016.bbl.
-[11] 
+[11]
+
+Package lastpage Warning: Rerun to get the references right on input line 355.
+
+
 AED: lastpage setting LastPage
 [12
 
 ]
 Commutative Diagram: try the PostScript option for better results
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 343.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 343.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 355.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 355.
 ("C:\Users\Clement\Desktop\articles these\fscd2016.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 343.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 343.
-Package rerunfilecheck Info: File `fscd2016.out' has not changed.
-(rerunfilecheck)             Checksum: 7E30B0197D381B86599F90F28C93A0E0;615.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 343.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 355.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 355.
+
+
+Package rerunfilecheck Warning: File `fscd2016.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `fscd2016.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  7E30B0197D381B86599F90F28C93A0E0;615.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 355.
  ) 
 Here is how much of TeX's memory you used:
- 13380 strings out of 493921
- 182294 string characters out of 3144871
- 289700 words of memory out of 3000000
- 16384 multiletter control sequences out of 15000+200000
+ 13370 strings out of 493921
+ 182158 string characters out of 3144871
+ 286567 words of memory out of 3000000
+ 16374 multiletter control sequences out of 15000+200000
  55559 words of font info for 59 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 44i,12n,40p,977b,551s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,12n,40p,981b,457s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{D:/Progr
 am Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{D:/Program Files (x8
 6)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{D:/Program Files (x86)/MiKTeX 2
@@ -1388,9 +1410,9 @@ MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><D:/Program Files (x8
 6)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><D:/Program Files (x86)/MiKTe
 X 2.9/fonts/type1/urw/times/utmr8a.pfb><D:/Program Files (x86)/MiKTeX 2.9/fonts
 /type1/urw/times/utmri8a.pfb>
-Output written on fscd2016.pdf (12 pages, 310080 bytes).
+Output written on fscd2016.pdf (12 pages, 308233 bytes).
 PDF statistics:
- 289 PDF objects out of 1000 (max. 8388607)
+ 261 PDF objects out of 1000 (max. 8388607)
  48 named destinations out of 1000 (max. 500000)
- 119 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 47 words of extra memory for PDF output out of 10000 (max. 10000000)
 

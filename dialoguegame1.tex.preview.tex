@@ -1,0 +1,37 @@
+%& C:\Users\Clement\AppData\Roaming\TikzEdt\TikzEdt\021~1.0\TEMP_H~1
+\begin{document}
+\tikzstyle{pvalue}=[circle, draw, fill=blue!50, minimum height=3em]
+\tikzstyle{ovalue}=[circle, draw,fill=red!50, minimum height=3em]
+\tikzstyle{dcell}=[circle,draw, minimum height=1em]
+\begin{tikzpicture}
+
+\node [pvalue] (v1) at (-2,0) {\Large{*}};
+\node [dcell] (v2) at (-3,-2) {$\alpha$};
+\node [ovalue] (v3) at (-2,-4) {\Large{q}};
+\node [dcell] (v4) at (-1,-6) {$\beta$};
+\node [pvalue] (v5) at (-2,-8) {\Large{v}};
+\draw  (v1) edge (v2);
+\draw  (v2) edge (v3);
+\draw  (v3) edge (v4);
+\draw  (v4) edge (v5);
+
+\usetikzlibrary{calc}
+\pgftransformreset
+\node[inner sep=0pt,outer sep=0pt,minimum size=0pt,line width=0pt,text width=0pt,text height=0pt] at (current bounding box) {};
+%add border to avoid cropping by pdflibnet
+\foreach \border in {0.1}
+  \useasboundingbox (current bounding box.south west)+(-\border,-\border) rectangle (current bounding box.north east)+(\border,\border);
+\newwrite\metadatafile
+\immediate\openout\metadatafile=\jobname_BB.txt
+\path
+  let
+    \p1=(current bounding box.south west),
+    \p2=(current bounding box.north east)
+  in
+  node[inner sep=0pt,outer sep=0pt,minimum size=0pt,line width=0pt,text width=0pt,text height=0pt,draw=white] at (current bounding box) {
+\immediate\write\metadatafile{\p1,\p2}
+};
+\immediate\closeout\metadatafile
+\end{tikzpicture}
+
+\end{document}

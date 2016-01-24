@@ -1,0 +1,45 @@
+%& C:\Users\Clement\AppData\Roaming\TikzEdt\TikzEdt\021~1.0\TEMP_H~1
+\begin{document}
+\begin{tikzpicture}
+
+\node (v7) at (-4,5) {A};
+\node (v8) at (0,5) {B};
+\node (v9) at (4,5) {C};
+\node (v1) at (-4,3) {$s_\sigma|A$};
+\node (v2) at (-4,2) {$t_\sigma|A$};
+\node (v3) at (0,3) {$s_\sigma|B=s_\tau|B$};
+\node (v4) at (0,2) {$t_\sigma|B=t_\tau|B$};
+\node (v5) at (4,3) {$s_\tau|C$};
+\node (v6) at (4,2) {$t_\tau|C$};
+\draw[->]   (v1) edge node[right]{$\subset$} (v2);
+\draw[->]  (v3) edge node[right]{$\subset ?$} (v4);
+\draw[->]  (v5) edge node[right]{$\subset$} (v6);
+\node (v10) at (-2,4) {$s_\sigma$};
+\node (v11) at (-2,1) {$t_\sigma$};
+\node (v12) at (2,4) {$s_\tau$};
+\node (v13) at (2,1) {$t_\tau$};
+\draw[->]  (v7) edge node[] {$\sigma$}(v8);
+\draw[->]  (v8) edge node[] {$\tau$}(v9);
+\draw[->]  (v10) edge node[right]{$\subset ?$} (v11);
+\draw[->]  (v12) edge node[right]{$\subset ?$} (v13);
+
+\usetikzlibrary{calc}
+\pgftransformreset
+\node[inner sep=0pt,outer sep=0pt,minimum size=0pt,line width=0pt,text width=0pt,text height=0pt] at (current bounding box) {};
+%add border to avoid cropping by pdflibnet
+\foreach \border in {0.1}
+  \useasboundingbox (current bounding box.south west)+(-\border,-\border) rectangle (current bounding box.north east)+(\border,\border);
+\newwrite\metadatafile
+\immediate\openout\metadatafile=\jobname_BB.txt
+\path
+  let
+    \p1=(current bounding box.south west),
+    \p2=(current bounding box.north east)
+  in
+  node[inner sep=0pt,outer sep=0pt,minimum size=0pt,line width=0pt,text width=0pt,text height=0pt,draw=white] at (current bounding box) {
+\immediate\write\metadatafile{\p1,\p2}
+};
+\immediate\closeout\metadatafile
+\end{tikzpicture}
+
+\end{document}
