@@ -77,13 +77,11 @@ Dialogue games were recently introduced by Mellies [2014-2016]
 as an attempt to unify the two traditional (but still disconnected)
 frameworks for game semantics:
 \begin{itemize}
-
 \item concrete data structures and sequential algorithms introduced by Berry and Curien in the early 1980s
 \item arena games introduced by Hyland, Nickau and Ong in the mid 1990s.
 \end{itemize}
-
 The key idea underlying the notion of dialogue game is that every move~$m$ 
-of an arena game should be decomposed as a pair $m=(alpha,val)$
+of an arena game should be decomposed as a pair $m=(\alpha,val)$
 consisting of a cell $\alpha$ and of a value~$val$.\\
 This decomposition enables one to interpret every move $m$ of an arena game 
 as the action for Player or for Opponent of filling a given cell with a given value.
@@ -103,8 +101,7 @@ designed by Hyland and Schalk in the early 2000s.\\
 We exhibit a number of interesting and sometimes unexpected structures of this model
 by embedding it into a specific intuitionistic hierarchy of dialogue game.
 This embedding enables us to recover the graphical notations of positions in dialogue games.
-Take for instance the game $A=(Bool \otimes Bool) \multimap Bool$.
-The translation as a graph:
+Take for instance the game $A=(Bool \otimes Bool) \multimap Bool$ which can be described by the following graph game:
 \begin{figure}[H]\centering\includegraphics[scale=0.46]{bool-tens-bool-arrow-bool-graph.pdf}\caption{The graph game for the type $(Bool \otimes Bool) \multimap Bool$} \end{figure}
 
 

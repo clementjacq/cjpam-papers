@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.6.1)  25 JAN 2016 00:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.6.1)  25 JAN 2016 10:28
 entering extended mode
 **abstactgalop2016.tex
 ("C:\Users\Clement\Desktop\articles these\abstactgalop2016.tex"
@@ -781,14 +781,14 @@ File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 75.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 81.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 80.
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--94
+Underfull \hbox (badness 10000) in paragraph at lines 83--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--98
+Underfull \hbox (badness 10000) in paragraph at lines 93--96
 
  []
 
@@ -797,7 +797,7 @@ File: bool-tens-bool-arrow-bool-graph.pdf Graphic file (type pdf)
 
 <use bool-tens-bool-arrow-bool-graph.pdf>
 Package pdftex.def Info: bool-tens-bool-arrow-bool-graph.pdf used on input line
- 108.
+ 105.
 (pdftex.def)             Requested size: 396.39616pt x 268.95068pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -810,7 +810,7 @@ File: bool-tens-bool-arrow-bool-dialogue.pdf Graphic file (type pdf)
 
 <use bool-tens-bool-arrow-bool-dialogue.pdf>
 Package pdftex.def Info: bool-tens-bool-arrow-bool-dialogue.pdf used on input l
-ine 113.
+ine 110.
 (pdftex.def)             Requested size: 140.04846pt x 164.85582pt.
 
 No file abstactgalop2016.bbl.
@@ -837,7 +837,7 @@ nts/type1/public/amsfonts/symbols/msam10.pfb><D:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/urw/helvetic/uhvr8a.pfb><D:/Program Files (x86)/MiKTeX 2.9/fonts/t
 ype1/urw/times/utmb8a.pfb><D:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/ti
 mes/utmr8a.pfb>
-Output written on abstactgalop2016.pdf (2 pages, 103816 bytes).
+Output written on abstactgalop2016.pdf (2 pages, 103345 bytes).
 PDF statistics:
  68 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
